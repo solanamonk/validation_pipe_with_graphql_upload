@@ -19,6 +19,6 @@ export class UploadCountersResolver {
   async incrementUploadCounter(
     @Args('incrementUploadCounter') incrementUploadCounterInput: IncrementUploadCounterInput,
   ): Promise<UploadCounter> {
-    return this.uploadCountersService.increment(incrementUploadCounterInput.file);
+    return this.uploadCountersService.increment(incrementUploadCounterInput.file, incrementUploadCounterInput.file2);
   }
 }
